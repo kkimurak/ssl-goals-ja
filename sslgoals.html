@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="2020-12-13">
-<title>Guiding Principles and Long Term Goals of the Small Size League</title>
+<title>RoboCup Small Size League (SSL) Principles and Goals</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -439,17 +438,512 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
-<h1>Guiding Principles and Long Term Goals of the Small Size League</h1>
-<div class="details">
-<span id="author" class="author">2020-12-13</span><br>
+<h1>RoboCup Small Size League (SSL) Principles and Goals</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_guiding_principles">Guiding Principles</a>
+<ul class="sectlevel2">
+<li><a href="#_human_interpretability">Human Interpretability</a></li>
+<li><a href="#_interesting_gameplay">Interesting Gameplay</a></li>
+<li><a href="#_robustness_to_real_world_uncertainty">Robustness to Real World Uncertainty</a></li>
+<li><a href="#_striving_for_full_autonomy">Striving for full autonomy</a></li>
+<li><a href="#_encourage_scientific_discourse">Encourage scientific discourse</a></li>
+</ul>
+</li>
+<li><a href="#_long_term_goals">Long Term Goals</a>
+<ul class="sectlevel2">
+<li><a href="#_human_in_the_loop_autonomy">Human-in-the-loop Autonomy</a>
+<ul class="sectlevel3">
+<li><a href="#_motivation">Motivation</a></li>
+<li><a href="#_schedule">Schedule</a></li>
+<li><a href="#_conforming_to">Conforming To</a></li>
+<li><a href="#_progress_measurements">Progress Measurements</a></li>
+<li><a href="#_achievements_so_far">Achievements so far</a></li>
+<li><a href="#_references_to_outside_work">References to Outside Work</a></li>
+<li><a href="#_next_steps">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#_reducing_stoppages">Reducing Stoppages</a>
+<ul class="sectlevel3">
+<li><a href="#_motivation_2">Motivation</a></li>
+<li><a href="#_schedule_2">Schedule</a></li>
+<li><a href="#_conforming_to_2">Conforming To</a></li>
+<li><a href="#_progress_measurements_2">Progress Measurements</a></li>
+<li><a href="#_achievements_so_far_2">Achievements so far</a></li>
+<li><a href="#_references_to_outside_work_2">References to Outside Work</a></li>
+<li><a href="#_next_steps_2">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#_automatic_adaptation_of_strategy">Automatic Adaptation of Strategy</a>
+<ul class="sectlevel3">
+<li><a href="#_motivation_3">Motivation</a></li>
+<li><a href="#_schedule_3">Schedule</a></li>
+<li><a href="#_conforming_to_3">Conforming To</a></li>
+<li><a href="#_progress_measurements_3">Progress Measurements</a></li>
+<li><a href="#_achievements_so_far_3">Achievements so far</a></li>
+<li><a href="#_references_to_outside_work_3">References to Outside Work</a></li>
+<li><a href="#_next_steps_3">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#_relaxing_ssl_vision_constraints">Relaxing SSL Vision constraints</a>
+<ul class="sectlevel3">
+<li><a href="#_motivation_4">Motivation</a></li>
+<li><a href="#_schedule_4">Schedule</a></li>
+<li><a href="#_conforming_to_4">Conforming To</a></li>
+<li><a href="#_progress_measurements_4">Progress Measurements</a></li>
+<li><a href="#_achievements_so_far_4">Achievements so far</a></li>
+<li><a href="#_references_to_outside_work_4">References to Outside Work</a></li>
+<li><a href="#_next_steps_4">Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#_more_dexterous_ball_manipulation">More dexterous ball manipulation</a>
+<ul class="sectlevel3">
+<li><a href="#_motivation_5">Motivation</a></li>
+<li><a href="#_schedule_5">Schedule</a></li>
+<li><a href="#_conforming_to_5">Conforming To</a></li>
+<li><a href="#_progress_measurements_5">Progress Measurements</a></li>
+<li><a href="#_achievements_so_far_5">Achievements so far</a></li>
+<li><a href="#_references_to_outside_work_5">References to Outside Work</a></li>
+<li><a href="#_next_steps_5">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div id="content">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<div class="sect1">
+<h2 id="_guiding_principles">Guiding Principles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section contains an overview of the general guiding principles of the RoboCup Small Size League (SSL). Each principle has its own section describing the goal and its motivation. Any changes in this section should be informed to and discussed with the whole league.</p>
+</div>
+<div class="sect2">
+<h3 id="_human_interpretability">Human Interpretability</h3>
+<div class="paragraph">
+<p>In order for the public to understand the progress of AI and robotics, it is important to demonstrate it on interpretable tasks and systems. Soccer is a game understood and played around the world making it an ideal task. As we develop the rules, AI, robots and other systems in RoboCup SSL, we keep the game understandable by the general public.</p>
+</div>
+<div class="paragraph">
+<p>We want for any spectator to be able to understand the game at any point, without having previous context. In other words, anyone who arrives at any match at any point, should easily be able to determine:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Which team is which</p>
+</li>
+<li>
+<p>Which team is winning</p>
+</li>
+<li>
+<p>What is the phase of the game (first half, half time, second half, etc.)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_interesting_gameplay">Interesting Gameplay</h3>
+<div class="paragraph">
+<p>The original idea of playing soccer with robots was to have a platform for research that is well known to the public, so that progress in research can more easily be seen by everyone and people will get motivated to join us within the field. Getting and keeping attention by the public is only possible, if the games are exciting and easily understandable. Additionally,</p>
+</div>
+<div class="paragraph">
+<p>the organisation and some teams depend on funding from sponsors. If the games do not entertain, or show the desired progress, this funding can get lost.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_robustness_to_real_world_uncertainty">Robustness to Real World Uncertainty</h3>
+<div class="paragraph">
+<p>The world is messy and full of uncertainty. Between partial observability, noise in sensors and actuation, and modeling errors it is important that our robots and AI are robust to this messiness.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_striving_for_full_autonomy">Striving for full autonomy</h3>
+<div class="paragraph">
+<p>One of the big objectives of the RoboCup Organization is to be able to have autonomous games and therefore, we want to reduce the human interference as much as possible, so as to truly be autonomous. Therefore, we aim for a fully autonomous team of robots and fully autonomous matches between two independent teams without any human interaction, including no human referee.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_encourage_scientific_discourse">Encourage scientific discourse</h3>
+<div class="paragraph">
+<p>One of the main objectives of the RoboCup Organization is to “promote robotics and AI research, by offering a publicly appealing, but formidable challenge”. It is important to keep in mind not just the challenge part, but the promotion of research done by teams in the SSL. In order to do so, teams in the SSL must be open to changes that encourage new AI and robotics research, and teams must also work to engage with each other, RoboCup at large, and the wider research community. New challenges may require significant work from teams in the league, but have the potential to improve robotics and AI both inside and outside the context of RoboCup. Additionally, teams should strive to publish and share their techniques and research both within the SSL but also to RoboCup as a whole and the wider AI and robotics communities.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_long_term_goals">Long Term Goals</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section contains an overview of the long-term goals of the RoboCup Small Size League (SSL) for the next 5 to 10 years. Each goal has its own section describing the goal, its motivation in at least one guiding principle, how we will evaluate progress towards this goal and references to related work done in other RoboCup leagues and the wider robotics and AI communities. Any changes in this section should be informed to the whole league.</p>
+</div>
+<div class="sect2">
+<h3 id="_human_in_the_loop_autonomy">Human-in-the-loop Autonomy</h3>
+<div class="sect3">
+<h4 id="_motivation">Motivation</h4>
+<div class="paragraph">
+<p>Our current level of technology allows us to make narrow, task-specific AI systems that perform well. However, there are still areas in SSL that are done manually right now. As a step towards general AI systems that can handle these jobs, it is important to have human supervision to make sure the systems are functioning in a way that is safe, beneficial, and aligns with user values.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule">Schedule</h4>
+<div class="paragraph">
+<p>Created: year 2020</p>
+</div>
+<div class="paragraph">
+<p>Expected to be implemented by 2027</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conforming_to">Conforming To</h4>
+<div class="paragraph">
+<p>Striving for full autonomy, Human Interpretability</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_progress_measurements">Progress Measurements</h4>
+<div class="paragraph">
+<p>Improvements can be measured in terms of time saving, efficiency or error rate.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Existing automated procedures can be supervised by humans</p>
+</li>
+<li>
+<p>Existing manual procedures can be supported by (partial) automation</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_achievements_so_far">Achievements so far</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The SSL-Status-Board on a big screen supports the human referee and the spectators in understanding and judging the decisions of the Auto-Referee</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_to_outside_work">References to Outside Work</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_next_steps">Next Steps</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Introduce a physical remote control for the teams</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>For automated robot substitution</p>
+</li>
+<li>
+<p>For changing the keeper</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Improving interaction between the human referee and the autoref (both have their strength and weaknesses; combining the strengths of both should be targeted)</p>
+</li>
+<li>
+<p>Push towards less manual exchange procedures</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Push automated robot substitution</p>
+</li>
+<li>
+<p>Introduce automated robot substitution after cards</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Add automated assistance for the vision expert</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>With a tool that shows quality issues and their locations</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reducing_stoppages">Reducing Stoppages</h3>
+<div class="sect3">
+<h4 id="_motivation_2">Motivation</h4>
+<div class="paragraph">
+<p>We want to reduce stoppages due to hardware issues, software issues, rule violations and general game flow to a minimum. This helps in focussing on interesting parts of the game and keeping spectators attracted. More stoppages means less time for actual game time and makes it more difficult to schedule games during a tournament.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule_2">Schedule</h4>
+<div class="paragraph">
+<p>Created: year 2020</p>
+</div>
+<div class="paragraph">
+<p>Expected to be implemented by 2027</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conforming_to_2">Conforming To</h4>
+<div class="paragraph">
+<p>Interesting Gameplay</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_progress_measurements_2">Progress Measurements</h4>
+<div class="paragraph">
+<p>The <a href="https://ssl.robocup.org/match-statistics/">match statistics</a> show the relevant time usage of the different game phases.</p>
+</div>
+<div class="paragraph">
+<p>In 2019 over all division A games, only 15% of the match time has been in RUNNING state.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_achievements_so_far_2">Achievements so far</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_to_outside_work_2">References to Outside Work</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_next_steps_2">Next Steps</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Increase the percentage of game-on time over the competition by adapting the rules</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Allow robot substitution while the game is running</p>
+</li>
+<li>
+<p>Do not stop for cards (give the team 10s to automatically remove the robot)</p>
+</li>
+<li>
+<p>Turn multiple fouls into red cards, instead of penalty kicks</p>
+</li>
+<li>
+<p>Avoid ball placement procedure, if not necessary</p>
+</li>
+<li>
+<p>Only stop for a limited set of fouls, increment a counter for the others</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatic_adaptation_of_strategy">Automatic Adaptation of Strategy</h3>
+<div class="sect3">
+<h4 id="_motivation_3">Motivation</h4>
+<div class="paragraph">
+<p>The ultimate goal of AI research is to understand and create a system of general intelligence. While this is far off in the future, we currently have the ability to make narrow-task specific AI systems. Designing these systems, combining them, and adapting them to changes in the world and new areas currently requires a large amount of human effort. We want to reduce this effort and move towards more adaptable systems, for example have better online, dynamic adaptation of strategies and learning/planning of new strategies on the fly.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule_3">Schedule</h4>
+<div class="paragraph">
+<p>Created: year 2020</p>
+</div>
+<div class="paragraph">
+<p>Expected to be implemented by 2027</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conforming_to_3">Conforming To</h4>
+<div class="paragraph">
+<p>Robustness to Real World Uncertainty, Interesting Gameplay</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_progress_measurements_3">Progress Measurements</h4>
+<div class="paragraph">
+<p>Can we create a team with specific weaknesses (e.g. part of the defense area is undefended consistently) and a team, having never seen this weakness, exploit it consistently?</p>
+</div>
+<div class="paragraph">
+<p>If a team has robots with performance capabilities outside expected (e.g. much faster movement, faster direction changes, etc.) can a team adapt their models of the opponents and their strategies to account for this?</p>
+</div>
+<div class="paragraph">
+<p>If a team develops novel hardware (e.g. Op-Amps multi-directional kicker) can teams detect on-the-fly this new capability and automatically adjust strategy and play to defend against this capability?</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_achievements_so_far_3">Achievements so far</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_to_outside_work_3">References to Outside Work</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_next_steps_3">Next Steps</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Motivate teams to work on innovations towards this goal</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_relaxing_ssl_vision_constraints">Relaxing SSL Vision constraints</h3>
+<div class="sect3">
+<h4 id="_motivation_4">Motivation</h4>
+<div class="paragraph">
+<p>There is currently a global shared vision system that teams require tight tolerances on. We want to be more robust against failures in this system and less dependent on the tolerances. This may involve better filtering and processing of the data, additional local perception or shared software, but we mainly want to give teams the room for new innovations in this domain.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule_4">Schedule</h4>
+<div class="paragraph">
+<p>Created: year 2020</p>
+</div>
+<div class="paragraph">
+<p>Expected to be implemented by 2027</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conforming_to_4">Conforming To</h4>
+<div class="paragraph">
+<p>Robustness to Real World Uncertainty</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_progress_measurements_4">Progress Measurements</h4>
+<div class="paragraph">
+<p>The precision and reliability of the global vision system can be measured by analyzing ssl-vision messages from the network or a standard log file.</p>
+</div>
+<div class="paragraph">
+<p>Statistics like the frame rate, the number of missing detections and the overall latency can be captured.</p>
+</div>
+<div class="paragraph">
+<p>These statistics help in comparing the quality of ssl-vision detections in different events/matches and in identifying realistic relaxations on the tolerances.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_achievements_so_far_4">Achievements so far</h4>
+<div class="paragraph">
+<p>In 2019, the <a href="https://ssl.robocup.org/robocup-2019-technical-challenges/">Vision Blackout Challenge</a> has been held for the first time. It required teams to detect and intercept a ball without the global vision system.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_to_outside_work_4">References to Outside Work</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_next_steps_4">Next Steps</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Build an automated tool to check these tolerances</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>A first prototype can be found <a href="https://github.com/RoboCup-SSL/ssl-quality-inspector">here</a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Define SSL-Vision tolerances that should be accepted by the teams</p>
+</li>
+<li>
+<p>Relax these tolerances over time</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_more_dexterous_ball_manipulation">More dexterous ball manipulation</h3>
+<div class="sect3">
+<h4 id="_motivation_5">Motivation</h4>
+<div class="paragraph">
+<p>One basic research topic in Robotics is to manipulate objects dexterously like humans. As we can see in a human soccer game, keeping the ball does not mean to grasp/capture the ball. However, the current style of dribbling is close to grasp/capture the ball, which enables to keep the ball with relative ease. We want to keep the ball in a new style without depending on the current dribbler. This type of skill which consists of manipulating an object without completely capturing it, is known as nonprehensile manipulation, which can be a rich topic of research in the SSL. Meanwhile, we would need to bring everyone to a similar level of ball control in the current setup before making new changes to the ball manipulation rules. Also, some considerations regarding the material of the ball could occur, in order to adjust the difficulty, i.e., changing to a ball that has a greater deceleration than the current golf ball.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_schedule_5">Schedule</h4>
+<div class="paragraph">
+<p>Created: year 2020</p>
+</div>
+<div class="paragraph">
+<p>Expected to be implemented by 2027</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_conforming_to_5">Conforming To</h4>
+<div class="paragraph">
+<p>Robustness to Real World Uncertainty</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_progress_measurements_5">Progress Measurements</h4>
+<div class="paragraph">
+<p>In order to achieve this goal, new types of dribbling might appear, as well as an increase in the number of passes and a decrease in the occurences of the ball leaving the field.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_achievements_so_far_5">Achievements so far</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_references_to_outside_work_5">References to Outside Work</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.frontiersin.org/articles/10.3389/frobt.2020.00008/full">J. Stüber, C. Zito, and R. Stolkin: “Let’s push things forward: A survey on robot pushing,” Front. Robot. AI, 7:8, 2020, doi: 10.3389/frobt.2020.00008.</a></p>
+</li>
+<li>
+<p><a href="https://ieeexplore.ieee.org/document/8280543">F. Ruggiero, V. Lippiello, and B. Siciliano: "Nonprehensile dynamic manipulation: A survey," in IEEE Robotics and Automation Letters, vol. 3, no. 3, pp. 1711-1718, July 2018, doi: 10.1109/LRA.2018.2801939.</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_next_steps_5">Next Steps</h4>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-12-13 17:37:01 UTC
+Last updated 2020-12-13 20:11:58 UTC
 </div>
 </div>
 </body>
