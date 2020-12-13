@@ -1,16 +1,238 @@
-:imagesdir: images/
-
-= Guiding Principles and Long Term Goals of the Small Size League
-{docdate}
+= RoboCup Small Size League (SSL) Principles and Goals
 :toc:
-:toclevels: 4
+:toclevels: 3
 
-// add icons from fontawesome in a up-to-date version
-ifdef::basebackend-html[]
-++++
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-++++
-endif::basebackend-html[]
+== Guiding Principles
 
-:icons: font
-:numbered:
+This section contains an overview of the general guiding principles of the RoboCup Small Size League (SSL). Each principle has its own section describing the goal and its motivation. Any changes in this section should be informed to and discussed with the whole league.
+
+=== Human Interpretability
+
+In order for the public to understand the progress of AI and robotics, it is important to demonstrate it on interpretable tasks and systems. Soccer is a game understood and played around the world making it an ideal task. As we develop the rules, AI, robots and other systems in RoboCup SSL, we keep the game understandable by the general public.
+
+We want for any spectator to be able to understand the game at any point, without having previous context. In other words, anyone who arrives at any match at any point, should easily be able to determine:
+
+* Which team is which
+* Which team is winning
+* What is the phase of the game (first half, half time, second half, etc.)
+
+=== Interesting Gameplay
+
+The original idea of playing soccer with robots was to have a platform for research that is well known to the public, so that progress in research can more easily be seen by everyone and people will get motivated to join us within the field. Getting and keeping attention by the public is only possible, if the games are exciting and easily understandable. Additionally,
+
+the organisation and some teams depend on funding from sponsors. If the games do not entertain, or show the desired progress, this funding can get lost.
+
+=== Robustness to Real World Uncertainty
+
+The world is messy and full of uncertainty. Between partial observability, noise in sensors and actuation, and modeling errors it is important that our robots and AI are robust to this messiness.
+
+=== Striving for full autonomy
+
+One of the big objectives of the RoboCup Organization is to be able to have autonomous games and therefore, we want to reduce the human interference as much as possible, so as to truly be autonomous. Therefore, we aim for a fully autonomous team of robots and fully autonomous matches between two independent teams without any human interaction, including no human referee.
+
+=== Encourage scientific discourse
+
+One of the main objectives of the RoboCup Organization is to “promote robotics and AI research, by offering a publicly appealing, but formidable challenge”. It is important to keep in mind not just the challenge part, but the promotion of research done by teams in the SSL. In order to do so, teams in the SSL must be open to changes that encourage new AI and robotics research, and teams must also work to engage with each other, RoboCup at large, and the wider research community. New challenges may require significant work from teams in the league, but have the potential to improve robotics and AI both inside and outside the context of RoboCup. Additionally, teams should strive to publish and share their techniques and research both within the SSL but also to RoboCup as a whole and the wider AI and robotics communities.
+
+== Long Term Goals
+
+This section contains an overview of the long-term goals of the RoboCup Small Size League (SSL) for the next 5 to 10 years. Each goal has its own section describing the goal, its motivation in at least one guiding principle, how we will evaluate progress towards this goal and references to related work done in other RoboCup leagues and the wider robotics and AI communities. Any changes in this section should be informed to the whole league.
+
+=== Human-in-the-loop Autonomy
+
+==== Motivation
+
+Our current level of technology allows us to make narrow, task-specific AI systems that perform well. However, there are still areas in SSL that are done manually right now. As a step towards general AI systems that can handle these jobs, it is important to have human supervision to make sure the systems are functioning in a way that is safe, beneficial, and aligns with user values.
+
+==== Schedule
+
+Created: year 2020
+
+Expected to be implemented by 2027
+
+==== Conforming To
+
+Striving for full autonomy, Human Interpretability
+
+==== Progress Measurements
+
+Improvements can be measured in terms of time saving, efficiency or error rate.
+
+For example,
+
+* Existing automated procedures can be supervised by humans
+* Existing manual procedures can be supported by (partial) automation
+
+==== Achievements so far
+
+* The SSL-Status-Board on a big screen supports the human referee and the spectators in understanding and judging the decisions of the Auto-Referee
+
+==== References to Outside Work
+
+
+==== Next Steps
+
+[arabic]
+. Introduce a physical remote control for the teams
+[loweralpha]
+.. For automated robot substitution
+.. For changing the keeper
+. Improving interaction between the human referee and the autoref (both have their strength and weaknesses; combining the strengths of both should be targeted)
+. Push towards less manual exchange procedures
+[loweralpha]
+.. Push automated robot substitution
+.. Introduce automated robot substitution after cards
+. Add automated assistance for the vision expert
+[loweralpha]
+.. With a tool that shows quality issues and their locations
+
+=== Reducing Stoppages
+
+==== Motivation
+
+We want to reduce stoppages due to hardware issues, software issues, rule violations and general game flow to a minimum. This helps in focussing on interesting parts of the game and keeping spectators attracted. More stoppages means less time for actual game time and makes it more difficult to schedule games during a tournament.
+
+==== Schedule
+
+Created: year 2020
+
+Expected to be implemented by 2027
+
+==== Conforming To
+
+Interesting Gameplay
+
+==== Progress Measurements
+
+The https://ssl.robocup.org/match-statistics/[+++match statistics+++] show the relevant time usage of the different game phases.
+
+In 2019 over all division A games, only 15% of the match time has been in RUNNING state.
+
+==== Achievements so far
+
+-
+
+==== References to Outside Work
+
+-
+
+==== Next Steps
+
+[arabic]
+. Increase the percentage of game-on time over the competition by adapting the rules
+[loweralpha]
+.. Allow robot substitution while the game is running
+.. Do not stop for cards (give the team 10s to automatically remove the robot)
+.. Turn multiple fouls into red cards, instead of penalty kicks
+.. Avoid ball placement procedure, if not necessary
+.. Only stop for a limited set of fouls, increment a counter for the others
+
+=== Automatic Adaptation of Strategy
+
+==== Motivation
+
+The ultimate goal of AI research is to understand and create a system of general intelligence. While this is far off in the future, we currently have the ability to make narrow-task specific AI systems. Designing these systems, combining them, and adapting them to changes in the world and new areas currently requires a large amount of human effort. We want to reduce this effort and move towards more adaptable systems, for example have better online, dynamic adaptation of strategies and learning/planning of new strategies on the fly.
+
+==== Schedule
+
+Created: year 2020
+
+Expected to be implemented by 2027
+
+==== Conforming To
+
+Robustness to Real World Uncertainty, Interesting Gameplay
+
+==== Progress Measurements
+
+Can we create a team with specific weaknesses (e.g. part of the defense area is undefended consistently) and a team, having never seen this weakness, exploit it consistently?
+
+If a team has robots with performance capabilities outside expected (e.g. much faster movement, faster direction changes, etc.) can a team adapt their models of the opponents and their strategies to account for this?
+
+If a team develops novel hardware (e.g. Op-Amps multi-directional kicker) can teams detect on-the-fly this new capability and automatically adjust strategy and play to defend against this capability?
+
+==== Achievements so far
+
+-
+
+==== References to Outside Work
+
+-
+
+==== Next Steps
+
+[arabic]
+. Motivate teams to work on innovations towards this goal
+
+=== Relaxing SSL Vision constraints
+
+==== Motivation
+
+There is currently a global shared vision system that teams require tight tolerances on. We want to be more robust against failures in this system and less dependent on the tolerances. This may involve better filtering and processing of the data, additional local perception or shared software, but we mainly want to give teams the room for new innovations in this domain.
+
+==== Schedule
+
+Created: year 2020
+
+Expected to be implemented by 2027
+
+==== Conforming To
+
+Robustness to Real World Uncertainty
+
+==== Progress Measurements
+
+The precision and reliability of the global vision system can be measured by analyzing ssl-vision messages from the network or a standard log file.
+
+Statistics like the frame rate, the number of missing detections and the overall latency can be captured.
+
+These statistics help in comparing the quality of ssl-vision detections in different events/matches and in identifying realistic relaxations on the tolerances.
+
+==== Achievements so far
+
+In 2019, the https://ssl.robocup.org/robocup-2019-technical-challenges/[+++Vision Blackout Challenge+++] has been held for the first time. It required teams to detect and intercept a ball without the global vision system.
+
+==== References to Outside Work
+
+-
+
+==== Next Steps
+
+. Build an automated tool to check these tolerances
+[loweralpha]
+.. A first prototype can be found https://github.com/RoboCup-SSL/ssl-quality-inspector[+++here+++]
+. Define SSL-Vision tolerances that should be accepted by the teams
+. Relax these tolerances over time
+
+=== More dexterous ball manipulation
+
+==== Motivation
+
+One basic research topic in Robotics is to manipulate objects dexterously like humans. As we can see in a human soccer game, keeping the ball does not mean to grasp/capture the ball. However, the current style of dribbling is close to grasp/capture the ball, which enables to keep the ball with relative ease. We want to keep the ball in a new style without depending on the current dribbler. This type of skill which consists of manipulating an object without completely capturing it, is known as nonprehensile manipulation, which can be a rich topic of research in the SSL. Meanwhile, we would need to bring everyone to a similar level of ball control in the current setup before making new changes to the ball manipulation rules. Also, some considerations regarding the material of the ball could occur, in order to adjust the difficulty, i.e., changing to a ball that has a greater deceleration than the current golf ball.
+
+==== Schedule
+
+Created: year 2020
+
+Expected to be implemented by 2027
+
+==== Conforming To
+
+Robustness to Real World Uncertainty
+
+==== Progress Measurements
+
+In order to achieve this goal, new types of dribbling might appear, as well as an increase in the number of passes and a decrease in the occurences of the ball leaving the field.
+
+==== Achievements so far
+
+-
+
+==== References to Outside Work
+
+* https://www.frontiersin.org/articles/10.3389/frobt.2020.00008/full[+++J. Stüber, C. Zito, and R. Stolkin: “Let’s push things forward: A survey on robot pushing,” Front. Robot. AI, 7:8, 2020, doi: 10.3389/frobt.2020.00008.+++]
+* https://ieeexplore.ieee.org/document/8280543[+++F. Ruggiero, V. Lippiello, and B. Siciliano: "Nonprehensile dynamic manipulation: A survey," in IEEE Robotics and Automation Letters, vol. 3, no. 3, pp. 1711-1718, July 2018, doi: 10.1109/LRA.2018.2801939.+++]
+
+==== Next Steps
+
+-
