@@ -1,238 +1,300 @@
-= RoboCup Small Size League (SSL) Principles and Goals
+= ロボカップ小型車輪型リーグ方針と目標/RoboCup Small Size League (SSL) Principles and Goals
 :toc:
 :toclevels: 3
 
-== Guiding Principles
+== 基本理念/Guiding Principles
 
+本章ではロボカップ小型車輪型リーグ(SSL)の全般的な基本理念を述べる。理念はそれぞれの章で個別に目標とその動機を解説する。本章へ加えられる変更はリーグ参加者全員に通知され、議論される。 +
 This section contains an overview of the general guiding principles of the RoboCup Small Size League (SSL). Each principle has its own section describing the goal and its motivation. Any changes in this section should be informed to and discussed with the whole league.
 
-=== Human Interpretability
+=== 人間の解釈可能性/Human Interpretability
 
+AI・ロボティクスの進歩を公に理解されるために、解釈可能なタスクとシステムでこれを検証することは重要である。サッカーは世界中で理解され、またプレイされており、この点で理想的なタスクと言える。ロボカップSSLでルールやAI、ロボット、その他のシステムを開発するにあたり、我々はゲームを一般の人々が理解できるよう務める。 +
 In order for the public to understand the progress of AI and robotics, it is important to demonstrate it on interpretable tasks and systems. Soccer is a game understood and played around the world making it an ideal task. As we develop the rules, AI, robots and other systems in RoboCup SSL, we keep the game understandable by the general public.
 
+我々は、観客が予備知識を持つことなく、どの時点でもゲームの状況を理解できるようにすべきであると考える。言い換えると、どのような観客がどのような時点で試合を見に訪れても、如何に述べる事項を簡単に判断できるはずである: +
 We want for any spectator to be able to understand the game at any point, without having previous context. In other words, anyone who arrives at any match at any point, should easily be able to determine:
 
-* Which team is which
-* Which team is winning
-* What is the phase of the game (first half, half time, second half, etc.)
+* どのチームがどのチームであるか +
+Which team is which
+* どのチームが勝利したのか +
+Which team is winning
+* ゲームがどの段階(前半、ハーフタイム、後半など)にあるか +
+What is the phase of the game (first half, half time, second half, etc.)
 
-=== Interesting Gameplay
+=== 関心を引くゲームプレイ/Interesting Gameplay
 
+ロボットでサッカーするという当初のアイデアは、誰もが研究の進歩を容易に見ることができ、人々が当該分野に参加する意欲を高めることができるよう、研究のプラットフォーム自体を一般に知られているものにするためのものであった。ゲームが容易に理解でき、また心躍るものである場合のみ、一般の人々の注目を集め維持することができる。 +
 The original idea of playing soccer with robots was to have a platform for research that is well known to the public, so that progress in research can more easily be seen by everyone and people will get motivated to join us within the field. Getting and keeping attention by the public is only possible, if the games are exciting and easily understandable. Additionally,
 
+加えて、運営組織や一部のチームは、スポンサーからの資金援助に依存している。ゲームが人々を楽しませるものでない、または望ましい進歩が無い場合は、援助が打ち切られる可能性もある。 +
 the organisation and some teams depend on funding from sponsors. If the games do not entertain, or show the desired progress, this funding can get lost.
 
-=== Robustness to Real World Uncertainty
+=== 実世界の不確実性に対するロバスト性/Robustness to Real World Uncertainty
 
+実世界は乱雑であり、不確実性に満ちている。部分的な可観測性、センサーや動作部、モデリングエラーの間にあって、ロボットとAIがこれらに対して堅牢であることは重要である。 +
 The world is messy and full of uncertainty. Between partial observability, noise in sensors and actuation, and modeling errors it is important that our robots and AI are robust to this messiness.
 
-=== Striving for full autonomy
+=== 完全な自立性への努力/Striving for full autonomy
 
+ロボカップ組織における大きな目的の一つが自律したゲームを行う事であることから、真に自律を実現するため我々はゲームに対する人間による干渉を可能な限り減らしたいと考える。そのため、我々は完全に自律的な二つの独立したチームによる、(審判も含む)いかなる人間による干渉も無い完全に自律した試合を目指す。 +
 One of the big objectives of the RoboCup Organization is to be able to have autonomous games and therefore, we want to reduce the human interference as much as possible, so as to truly be autonomous. Therefore, we aim for a fully autonomous team of robots and fully autonomous matches between two independent teams without any human interaction, including no human referee.
 
-=== Encourage scientific discourse
+=== 科学的言説の推奨/Encourage scientific discourse
 
+ロボカップ組織の主目的の一つは「公に魅力的でありながら手ごわい挑戦を提供することにより、ロボット工学とAIの研究を促進する事」である。この課題への挑戦だけではなく、SSLに参加するチームの研究の促進を念頭に置くことが重要である。そのためには、SSLに参加するチームはロボット工学やAIにおける新しい研究を奨励する変更に対しオープンでなければならず、各チームはまた相互に、ロボカップ全体に、そしてより広い研究コミュニティに関与するために務めなければならない。新しい課題には、リーグ内のチームによる多大な作業が必要になり得るが、ロボカップのコンテキストの内外でロボット工学やAIを改善する可能性がある。さらに各チームは、小型リーグのみならずロボカップ全体、またより広いAI・ロボット工学のコミュニティに対して彼らの技術と研究を公開および共有するよう務める必要がある。 +
 One of the main objectives of the RoboCup Organization is to “promote robotics and AI research, by offering a publicly appealing, but formidable challenge”. It is important to keep in mind not just the challenge part, but the promotion of research done by teams in the SSL. In order to do so, teams in the SSL must be open to changes that encourage new AI and robotics research, and teams must also work to engage with each other, RoboCup at large, and the wider research community. New challenges may require significant work from teams in the league, but have the potential to improve robotics and AI both inside and outside the context of RoboCup. Additionally, teams should strive to publish and share their techniques and research both within the SSL but also to RoboCup as a whole and the wider AI and robotics communities.
 
-== Long Term Goals
+== 長期目標/Long Term Goals
 
+本章ではロボカップ小型機リーグ(SSL)における5年~10年間の長期目標について概要を述べる。各目標はそれぞれの章で目標、少なくとも一つの指針となる動機、この目標に向けた進捗状況の評価方法、他のロボカップリーグやより広範なロボット工学・AIコミュニティで行われた関連作業などの参考資料を記載する。本章での変更事項がある場合は、リーグ全体に通知されなければならない。 +
 This section contains an overview of the long-term goals of the RoboCup Small Size League (SSL) for the next 5 to 10 years. Each goal has its own section describing the goal, its motivation in at least one guiding principle, how we will evaluate progress towards this goal and references to related work done in other RoboCup leagues and the wider robotics and AI communities. Any changes in this section should be informed to the whole league.
 
-=== Human-in-the-loop Autonomy
+=== 人間参加型の自律性/Human-in-the-loop Autonomy
 
-==== Motivation
+==== 動機/Motivation
 
+我々の現在の技術レベルでは、狭い領域でのタスク固有なものであれば高パフォーマンスなAIシステムを作成できる。しかしながら、SSLにおいては、現在手動で実行されている領域がまだ存在する。これらのジョブを処理できる一般的なAIシステムに向けたステップとして、システムが安全かつ有益で、ユーザーの価値観と一致する方法で機能していることを確かめるため、人間による監督が重要である。 +
 Our current level of technology allows us to make narrow, task-specific AI systems that perform well. However, there are still areas in SSL that are done manually right now. As a step towards general AI systems that can handle these jobs, it is important to have human supervision to make sure the systems are functioning in a way that is safe, beneficial, and aligns with user values.
 
-==== Schedule
+==== スケジュール/Schedule
 
+作成: 2020年 +
 Created: year 2020
 
+2027年までの実装を目標とする +
 Expected to be implemented by 2027
 
-==== Conforming To
+==== 準拠する理念/Conforming To
 
-Striving for full autonomy, Human Interpretability
+完全な自立性への努力/Striving for full autonomy, 人間の解釈可能性/Human Interpretability
 
-==== Progress Measurements
+==== 進捗状況の評価方法/Progress Measurements
 
+時間の節約、効率、またはエラー率の観点から改善状況を測定できる。 +
 Improvements can be measured in terms of time saving, efficiency or error rate.
 
+たとえば、 +
 For example,
 
-* Existing automated procedures can be supervised by humans
-* Existing manual procedures can be supported by (partial) automation
+* 既存の自動化された手順は人間により監視できる +
+Existing automated procedures can be supervised by humans
+* 既存の手動手順は(部分的な)自動化によりサポートできる +
+Existing manual procedures can be supported by (partial) automation
 
-==== Achievements so far
+==== これまでの成果/Achievements so far
 
-* The SSL-Status-Board on a big screen supports the human referee and the spectators in understanding and judging the decisions of the Auto-Referee
+* SSL-Status-Boardを大画面に映すことで、オートレフェリーの決定を理解・判断する際に、人間の審判と観客をサポートする +
+The SSL-Status-Board on a big screen supports the human referee and the spectators in understanding and judging the decisions of the Auto-Referee
 
-==== References to Outside Work
+==== 参考/References to Outside Work
 
 
-==== Next Steps
+==== 次のステップ/Next Steps
 
 [arabic]
-. Introduce a physical remote control for the teams
+. 以下の用途のため、物理的な遠隔制御デバイスを各チームに提供する +
+Introduce a physical remote control for the teams
 [loweralpha]
-.. For automated robot substitution
-.. For changing the keeper
-. Improving interaction between the human referee and the autoref (both have their strength and weaknesses; combining the strengths of both should be targeted)
-. Push towards less manual exchange procedures
+.. ロボット交代の自動化 +
+For automated robot substitution
+.. キーパーの変更 +
+For changing the keeper
+. 人間の審判とオートレフ間の相互作用の改善(両者に長所と短所がある。両者の長所を組み合わせることを目標とする必要がある) +
+Improving interaction between the human referee and the autoref (both have their strength and weaknesses; combining the strengths of both should be targeted)
+. 手作業の少ないロボット交代手順の推進 +
+Push towards less manual exchange procedures
 [loweralpha]
-.. Push automated robot substitution
-.. Introduce automated robot substitution after cards
-. Add automated assistance for the vision expert
+.. ロボットの自動交代の推進 +
+Push automated robot substitution
+.. レッドカード/イエローカード後のロボット自動退去の導入 +
+Introduce automated robot substitution after cards
+. visionエキスパートに対する自動アシスタントの追加 +
+Add automated assistance for the vision expert
 [loweralpha]
-.. With a tool that shows quality issues and their locations
+.. 品質や位置を表示するツールなど +
+With a tool that shows quality issues and their locations
 
-=== Reducing Stoppages
+=== 試合中断の削減/Reducing Stoppages
 
-==== Motivation
+==== 動機/Motivation
 
+我々は、ハードウェア・ソフトウェアの問題、反則、その他試合の流れの中での試合中断を最小限にとどめたい。これは試合中の関心を引く部分に焦点を合わせ、観客を惹きつけ続けるのに役立つ。より多くの中断は実際の試合時間が少なくなることを意味し、トーナメントの試合スケジュール設定をより難しくする。 +
 We want to reduce stoppages due to hardware issues, software issues, rule violations and general game flow to a minimum. This helps in focussing on interesting parts of the game and keeping spectators attracted. More stoppages means less time for actual game time and makes it more difficult to schedule games during a tournament.
 
-==== Schedule
+==== スケジュール/Schedule
 
+作成: 2020年 +
 Created: year 2020
 
+2027年までの実装を目標とする +
 Expected to be implemented by 2027
 
-==== Conforming To
+==== 準拠する理念/Conforming To
 
-Interesting Gameplay
+関心を引くゲームプレイ/Interesting Gameplay
 
-==== Progress Measurements
+==== 進捗状況の評価方法/Progress Measurements
 
+https://ssl.robocup.org/match-statistics/[+++試合統計ツール+++]によって、試合の各段階における時間の統計データを示すことができる。 +
 The https://ssl.robocup.org/match-statistics/[+++match statistics+++] show the relevant time usage of the different game phases.
 
+2019年に行われた全てのDivision Aの試合において、RUNNING(オンプレイ)である時間の比率はわずか15%であった。 +
 In 2019 over all division A games, only 15% of the match time has been in RUNNING state.
 
-==== Achievements so far
+==== これまでの成果/Achievements so far
 
 -
 
-==== References to Outside Work
+==== 参考/References to Outside Work
 
 -
 
-==== Next Steps
+==== 次のステップ/Next Steps
 
 [arabic]
-. Increase the percentage of game-on time over the competition by adapting the rules
+. ルールを調整することで、競技中のオンプレイ時間の比率を増やす +
+Increase the percentage of game-on time over the competition by adapting the rules
 [loweralpha]
-.. Allow robot substitution while the game is running
-.. Do not stop for cards (give the team 10s to automatically remove the robot)
-.. Turn multiple fouls into red cards, instead of penalty kicks
-.. Avoid ball placement procedure, if not necessary
-.. Only stop for a limited set of fouls, increment a counter for the others
+.. オンプレイ中のロボット交代の許容 +
+Allow robot substitution while the game is running
+.. イエロー/レッドカード時のストップゲーム廃止(宣告されたチームはロボットを自動的に撤去するための猶予が10秒間だけ与えられる) +
+Do not stop for cards (give the team 10s to automatically remove the robot)
+.. 規定回数以上のファウルが発生した際のペナルティーキックをレッドカードに置換 +
+Turn multiple fouls into red cards, instead of penalty kicks
+.. ボール自動配置の省略(不要な場合) +
+Avoid ball placement procedure, if not necessary
+.. ファウルは計上のみ行い、ファウルごとのストップの代わりに一定カウントごとのストップとする +
+Only stop for a limited set of fouls, increment a counter for the others
 
-=== Automatic Adaptation of Strategy
+=== 戦略の自動適用/Automatic Adaptation of Strategy
 
-==== Motivation
+==== 動機/Motivation
 
+AI研究における究極の目標は汎用的な知性システムを理解し、構築することである。これは遥か遠い未来のことであるが、一方で現時点で我々は狭いタスク固有のAIシステムを構築するだけの能力がある。これらのシステムを設計し、組み合わせ、世界や新しい分野の変化に適応させるには、現時点では多大な人的努力を要する。我々はこの労力を減らし、より適応性の高い - 例えばよりよい動的な新戦略の学習・計画、そして戦略適用をオンラインで行う - システムに移行したいと考える。 +
 The ultimate goal of AI research is to understand and create a system of general intelligence. While this is far off in the future, we currently have the ability to make narrow-task specific AI systems. Designing these systems, combining them, and adapting them to changes in the world and new areas currently requires a large amount of human effort. We want to reduce this effort and move towards more adaptable systems, for example have better online, dynamic adaptation of strategies and learning/planning of new strategies on the fly.
 
-==== Schedule
+==== スケジュール/Schedule
 
+作成: 2020年 +
 Created: year 2020
 
+2027年までの実装を目標とする +
 Expected to be implemented by 2027
 
-==== Conforming To
+==== 準拠する理念/Conforming To
 
-Robustness to Real World Uncertainty, Interesting Gameplay
+実世界の不確実性に対するロバスト性/Robustness to Real World Uncertainty, 関心を引くゲームプレイ/Interesting Gameplay
 
-==== Progress Measurements
+==== 進捗状況の評価方法/Progress Measurements
 
+特定の弱点(例えば、一部のエリアが一貫して防御されていない)を持ったチームがあるとして、その弱点を見たことが無い状態でその弱点を突くことが可能か? +
 Can we create a team with specific weaknesses (e.g. part of the defense area is undefended consistently) and a team, having never seen this weakness, exploit it consistently?
 
+予想外の性能(例えば、非常に高速な移動、高速な方向転換)を持ったロボットを所有するチームがあるとして、対戦相手のモデルと戦略をこのようなチームを説明するためのものに適応させることが可能か? +
 If a team has robots with performance capabilities outside expected (e.g. much faster movement, faster direction changes, etc.) can a team adapt their models of the opponents and their strategies to account for this?
 
+新たなハードウェア(例えば、Op-Ampsが開発した多方向キッカー)を開発したチームがあるとして、この新しい機能をその場で検出し、戦略を自動的に調整してこれに対して防御策を講じるプレイを行うことは可能か? +
 If a team develops novel hardware (e.g. Op-Amps multi-directional kicker) can teams detect on-the-fly this new capability and automatically adjust strategy and play to defend against this capability?
 
-==== Achievements so far
+==== これまでの成果/Achievements so far
 
 -
 
-==== References to Outside Work
+==== 参考/References to Outside Work
 
 -
 
-==== Next Steps
+==== 次のステップ/Next Steps
 
 [arabic]
-. Motivate teams to work on innovations towards this goal
+. 各チームがこの目標に向けたイノベーションに取り組むよう促す +
+Motivate teams to work on innovations towards this goal
 
-=== Relaxing SSL Vision constraints
+=== SSL Visionの制約の緩和/Relaxing SSL Vision constraints
 
-==== Motivation
+==== 動機/Motivation
 
+現在SSLでは共有ビジョンシステム(SSL-Vision)を有しており、これは各チームから厳しい公差を要求される。我々はこのシステムの障害に対してより堅牢な、かつこの公差への依存が少ないものとしたい。これにはデータのより適切なフィルタリングと処理、追加のローカルな認識システムや共有ソフトウェアが考えられるが、この分野における新しいイノベーションの余地をチームに提供したいと考える。 +
 There is currently a global shared vision system that teams require tight tolerances on. We want to be more robust against failures in this system and less dependent on the tolerances. This may involve better filtering and processing of the data, additional local perception or shared software, but we mainly want to give teams the room for new innovations in this domain.
 
-==== Schedule
+==== スケジュール/Schedule
 
+作成: 2020年 +
 Created: year 2020
 
+2027年までの実装を目標とする +
 Expected to be implemented by 2027
 
-==== Conforming To
+==== 準拠する理念/Conforming To
 
-Robustness to Real World Uncertainty
+実世界の不確実性に対するロバスト性/Robustness to Real World Uncertainty
 
-==== Progress Measurements
+==== 進捗状況の評価方法/Progress Measurements
 
+グローバルビジョンシステムの精度と信頼性は、ネットワークまたは標準ログファイルのssl-visionメッセージを解析することで測定できる。 +
 The precision and reliability of the global vision system can be measured by analyzing ssl-vision messages from the network or a standard log file.
 
+フレームレート、欠落した検出の数、全体的な遅延などの統計が取得できる。 +
 Statistics like the frame rate, the number of missing detections and the overall latency can be captured.
 
+これらの統計は、様々なイベント/試合におけるssl-visionの検出品質の比較、現実的に緩和できる公差の特定に役立つ。 +
 These statistics help in comparing the quality of ssl-vision detections in different events/matches and in identifying realistic relaxations on the tolerances.
 
-==== Achievements so far
+==== これまでの成果/Achievements so far
 
+2019年には、テクニカルチャレンジとして https://ssl.robocup.org/robocup-2019-technical-challenges/[+++Vision Blackout Challenge+++] が行われた。これは各チームがグローバルビジョンなしでボールを検出しインターセプト(横取り)することを求めるものである。 +
 In 2019, the https://ssl.robocup.org/robocup-2019-technical-challenges/[+++Vision Blackout Challenge+++] has been held for the first time. It required teams to detect and intercept a ball without the global vision system.
 
-==== References to Outside Work
+==== 参考/References to Outside Work
 
 -
 
-==== Next Steps
+==== 次のステップ/Next Steps
 
-. Build an automated tool to check these tolerances
+. これらの公差を自動的に確認するツールを作成する +
+Build an automated tool to check these tolerances
 [loweralpha]
-.. A first prototype can be found https://github.com/RoboCup-SSL/ssl-quality-inspector[+++here+++]
-. Define SSL-Vision tolerances that should be accepted by the teams
-. Relax these tolerances over time
+.. 最初のプロトタイプは https://github.com/RoboCup-SSL/ssl-quality-inspector[+++GitHub+++]に公開されている。 +
+A first prototype can be found https://github.com/RoboCup-SSL/ssl-quality-inspector[+++here+++]
+. 各チームが受け入れられる、SSl-Visionの公差を定める +
+Define SSL-Vision tolerances that should be accepted by the teams
+. 時間をかけながら公差を緩和していく +
+Relax these tolerances over time
 
-=== More dexterous ball manipulation
+=== より器用なボール操作/More dexterous ball manipulation
 
-==== Motivation
+==== 動機/Motivation
 
+ロボティクスにおける基礎的な研究トピックの一つが、人間のように器用に物体を操作することである。人間のサッカーで見ることができるように、ボールを保持する事と把持/奪取することは同義でない。しかしながら、現在のドリブルはボールを把持/奪取している状態に近く、これは比較的簡単にボールを保持する事ができる。我々は現在のドリブラーに頼ることなく、ボールを新しいスタイルで保持したい。オブジェクトを完全に把持することなく操作するこのタイプのスキルは非把持マニピュレーション(nonprehensile maniplation)として知られており、SSLにおけるよい研究トピックとなり得る。一方で、ボール操作に関するルールに新しい変更を加える前に現在のセットアップにおける全チームのボール操作レベルを同じ水準にする必要がある。また難易度を調整するために、現在のゴルフボールより減速しやすいボールに変更するなどボールの材質に関していくつかの考慮事項が生じる可能性がある。 +
 One basic research topic in Robotics is to manipulate objects dexterously like humans. As we can see in a human soccer game, keeping the ball does not mean to grasp/capture the ball. However, the current style of dribbling is close to grasp/capture the ball, which enables to keep the ball with relative ease. We want to keep the ball in a new style without depending on the current dribbler. This type of skill which consists of manipulating an object without completely capturing it, is known as nonprehensile manipulation, which can be a rich topic of research in the SSL. Meanwhile, we would need to bring everyone to a similar level of ball control in the current setup before making new changes to the ball manipulation rules. Also, some considerations regarding the material of the ball could occur, in order to adjust the difficulty, i.e., changing to a ball that has a greater deceleration than the current golf ball.
 
-==== Schedule
+==== スケジュール/Schedule
 
+作成: 2020年 +
 Created: year 2020
 
+2027年までの実装を目標とする +
 Expected to be implemented by 2027
 
-==== Conforming To
+==== 準拠する理念/Conforming To
 
-Robustness to Real World Uncertainty
+実世界の不確実性に対するロバスト性/Robustness to Real World Uncertainty
 
-==== Progress Measurements
+==== 進捗状況の評価方法/Progress Measurements
 
+目標を達成するため、例えば新しいタイプのドリブルが登場し、これに伴いパスの数が増えボールがフィールド外に出る事も減るかもしれない。 +
 In order to achieve this goal, new types of dribbling might appear, as well as an increase in the number of passes and a decrease in the occurences of the ball leaving the field.
 
-==== Achievements so far
+==== これまでの成果/Achievements so far
 
 -
 
-==== References to Outside Work
+==== 参考/References to Outside Work
 
 * https://www.frontiersin.org/articles/10.3389/frobt.2020.00008/full[+++J. Stüber, C. Zito, and R. Stolkin: “Let’s push things forward: A survey on robot pushing,” Front. Robot. AI, 7:8, 2020, doi: 10.3389/frobt.2020.00008.+++]
 * https://ieeexplore.ieee.org/document/8280543[+++F. Ruggiero, V. Lippiello, and B. Siciliano: "Nonprehensile dynamic manipulation: A survey," in IEEE Robotics and Automation Letters, vol. 3, no. 3, pp. 1711-1718, July 2018, doi: 10.1109/LRA.2018.2801939.+++]
 
-==== Next Steps
+==== 次のステップ/Next Steps
 
 -
