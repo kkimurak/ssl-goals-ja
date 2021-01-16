@@ -1,5 +1,7 @@
 # Guiding Principles and Long Term Goals of the Small Size League
 
+English | [Japanese](README_ja.md)
+
 This is the AsciiDoc source for the official RoboCup Small Size League guiding principles and long term goals.
 
 ## Build
