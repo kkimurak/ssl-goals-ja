@@ -9,14 +9,14 @@ services:
 
 before_install:
   - mkdir -p output
-  - docker pull htakeuchi/docker-asciidoctor-jp
+  - docker pull asciidoctor/docker-asciidoctor
 
 install:
   - pip install htmldiffer
 
 script:
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor -a data-uri sslgoals.adoc
-  - docker run -v $TRAVIS_BUILD_DIR:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicJP sslgoals.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor -a data-uri sslgoals.adoc
+  - docker run -v $TRAVIS_BUILD_DIR:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font sslgoals.adoc
 
 after_error:
   - docker logs asciidoc-to-html
