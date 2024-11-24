@@ -8,7 +8,7 @@
 
 ## ビルド
 
-本ドキュメントはmaster-jaブランチの更新に応じて、自動的に[Githuub Page](https://kkimurak.github.io/ssl-goals-ja/sslgoals.html)に公開されます。[PDF版](https://kkimurak.github.io/ssl-goals-ja/sslgoals.pdf)もご利用いただけます。  
+本ドキュメントはmaster-jaブランチの更新に応じて、自動的に[GitHub Page](https://kkimurak.github.io/ssl-goals-ja/sslgoals.html)に公開されます。[PDF版](https://kkimurak.github.io/ssl-goals-ja/sslgoals.pdf)もご利用いただけます。  
 
 ### ネイティブ版AsciDoctorの使用
 
@@ -19,23 +19,22 @@ AsciiDoctorをインストールしてください (https://asciidoctor.org/)。
 asciidoctor sslgoals.adoc
 ```
 
-日本語を含むPDFを生成する場合、asciidoctor-pdf-cjk-kai_gen_gothicを使うと良いでしょう :
+日本語を含むPDFを生成する場合、 `-a scripts=cjk` および `-a pdf-theme=default-with-fallback-font` を使うと良いでしょう :
 
 ```sh
 # Build the PDF version
-asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicJP sslgoals.adoc
+asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font sslgoals.adoc
 ```
 
 ### dockerイメージの使用
 
-Dockerをインストールしているのであれば、日本語環境向けに最適化されたAsciiDoctorイメージを使うことができます :
-rをインストールしているのであれば、日本語環境向けに最適化されたAsciiDoctorイメージを使うことができます :
+Dockerをインストールしているのであれば、公式のAsciiDoctorイメージを使うことができます :
 
 ```sh
 # dockerイメージをpullする
-docker pull htakeuchi/docker-asciidoctor-jp
+docker pull asciidoctor/docker-asciidoctor
 # HTML5版のビルド
-docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor sslgoals.adoc
+docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor sslgoals.adoc
 # Build the PDF version
-docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicJP asciidoctor-pdf sslgoals.adoc
+docker run -v $PWD:/documents/ asciidoctor/docker-asciidoctor asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font sslgoals.adoc
 ```
