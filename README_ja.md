@@ -8,7 +8,7 @@
 
 ## ビルド
 
-本ドキュメントはmaster-jaブランチの更新に応じて、自動的に[Githuub Page](https://kkimurak.github.io/ssl-goals-ja/sslgoals.html)に公開されます。[PDF版](https://kkimurak.github.io/ssl-goals-ja/sslgoals.pdf)もご利用いただけます。  
+本ドキュメントはmaster-jaブランチの更新に応じて、自動的に[GitHub Page](https://kkimurak.github.io/ssl-goals-ja/sslgoals.html)に公開されます。[PDF版](https://kkimurak.github.io/ssl-goals-ja/sslgoals.pdf)もご利用いただけます。  
 
 ### ネイティブ版AsciDoctorの使用
 
